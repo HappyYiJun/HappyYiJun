@@ -64,6 +64,10 @@
 	box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
 	display: none;
 }
+.content>div{
+	position: absolute;
+	display: none;
+}
 .channel {
 	height: 24px;
 	padding-left: 20px;
@@ -87,7 +91,7 @@
 }
 .cate_detail {
 	padding: 10px 17px 0 20px;
-	overflow: hidden; 699
+	overflow: hidden;
 }
 .cate_detail dl {
 	display: block;
@@ -132,6 +136,10 @@
 }
 .t-img li {
 	position: absolute;
+  transition: opacity 1.5s;
+}
+.t-img li.ac{
+	z-index: 1;
 }
 .arrow-l,
 .arrow-r {
@@ -147,12 +155,17 @@
 	color: rgba(255, 255, 255, .6);
 	font-family: arial;
 	font-weight: normal;
+	z-index: 2;
 }
 .arrow-l {
 	left: 0;
+	z-index: 2;
+
 }
 .arrow-r {
 	right: 0;
+	z-index: 2;
+
 }
 .circle {
 	height: 20px;
@@ -163,6 +176,8 @@
 	transform: translateX(-50%);
 	border-radius: 10px;
 	padding-left: 0 8px 0 8px;
+	z-index: 2;
+
 }
 .circle li {
 	width: 12px;
